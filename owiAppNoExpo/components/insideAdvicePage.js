@@ -48,8 +48,8 @@ export default class InsideAdvicePage extends React.Component {
         height="100%"
         preserveAspectRatio="xMidYMid meet"
         opacity="1"
-        href={require('./img/img3.jpg')}
-    />
+        href={require('./img/img1.jpg')}
+        />
 
     <Polygon
         points= "0,0 0,185 430,140 430,0"
@@ -125,9 +125,8 @@ const styles = StyleSheet.create({
 	    fontSize:10
 	},
 	text: {
-	    left:5,
-	    fontWeight:'bold',
-	    color: 'black',
-	    fontSize:24,
+	    marginHorizontal:4,
+	    color: 'grey',
+	    fontSize:20,
 	}
 })

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Header, Content, Form, Item, Input, Label, Button, Text, StyleProvider, Icon} from 'native-base';
+import { Container, Header, Content, Form, Item, Input, Label, Button, Text, StyleProvider, Icon, Toast} from 'native-base';
 import { Actions, Router, Scene, Stack } from 'react-native-router-flux';
 import { Image, StyleSheet,  Alert, View, ImageBackground} from 'react-native';
 import { Col, Row, Grid } from "react-native-easy-grid";
@@ -11,7 +11,8 @@ export default class ConnectPage extends React.Component {
       docs: [],
       syncStatus: '',
       username: '',
-      password: ''
+      password: '',
+      showToast: true
     };
   }
   
@@ -40,7 +41,12 @@ export default class ConnectPage extends React.Component {
       </Item>
       <Row size={0.1}></Row>
       <Item >
-      <Input placeholder='Numéro de série' visible-password='false' secureTextEntry={true} clearButtonMode='always'/>
+      <Input placeholder='Numéro de série' visible-password='false' secureTextEntry={true} clearButtonMode='always' onFocus={()=> Toast.show({
+          text: 'Le numéro de série se trouve sous votre matelas, celui-ci est composé de 4 chiffres et 1 lettre. Il vous sera indispensable par la suite pour vous connecter.',
+          position: 'bottom',
+          buttonText: 'X',
+          type: 'warning'
+        })}/>
       </Item>
       <Row size={0.1}></Row>
       <Row size={1}>

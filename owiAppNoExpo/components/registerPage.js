@@ -9,7 +9,7 @@ export default class RegisterPage extends React.Component {
     super(props);
     this.state = {
       username: '',
-      showToast: false
+      showToast: true
     };
   }
   
