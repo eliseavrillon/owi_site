@@ -44,7 +44,7 @@ export default class AdvicePage extends React.Component {
 	const datas =
 	    [
 	     {
-		 date:"08/01/1997",
+		 date:"8 décembre 2018",
 		 title: "POSITIONS SEXUELLES",
 					title1: "POSITIONS",
 					title2: "SEXUELLES",
